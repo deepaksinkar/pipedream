@@ -1,0 +1,39 @@
+import java.io.*;
+ 
+import java.util.*;
+ 
+import java.math.BigInteger;
+ 
+class TestClass {
+ 
+public static void main(String args[] ) throws Exception {
+ 
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+ 
+String n1=br.readLine();
+ 
+int n=Integer.parseInt(n1);
+ 
+//br.nextLine();
+ 
+BigInteger[] a=new BigInteger[n];
+ 
+String str=br.readLine();
+ 
+String[] s=str.split(" ");
+ 
+for(int i=0;i<n;i++)
+ 
+a[i]=BigInteger.valueOf(Integer.parseInt(s[i]));
+ 
+BigInteger sum=BigInteger.valueOf(0);
+ 
+for(int i=0;i<n;i++)
+ 
+sum=sum.add(a[i]);
+ 
+System.out.println(sum);
+ 
+}
+ 
+}
